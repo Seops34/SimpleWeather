@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SimpleWeather</string>
+    <string name="text_developer">Copyright(C) 2020. SeoSeongHyuk. All rights reserved.</string>
+
+    <string name="text_title_search">Search</string>
+    <string name="text_title_favorites">Favorites</string>
+
+    <string name="text_noti_exit">Press once more to close the app.</string>
+    <string name="text_search_hint">Find the city you want.</string>
+    <string name="text_search">Search</string>
+
+    <string name="text_location">Location</string>
+    <string name="text_weather">Weather</string>
+
+    <string name="text_max_temp">Max Temperature</string>
+    <string name="text_min_temp">Min Temperature</string>
+    <string name="text_celsius">°C</string>
+
+    <string name="text_no_data">There is no data.</string>
+
+    <string name="text_network_unstable">Network is unstable.\nPlease check your network.</string>
+    <string name="text_ok">Ok</string>
+    <string name="text_cancel">Cancel</string>
+</resources>

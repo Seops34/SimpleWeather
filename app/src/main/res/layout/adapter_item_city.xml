@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.seosh.simpleweather.viewmodel.CityAdapterViewModel" />
+        
+        <variable
+            name="cityItem"
+            type="com.seosh.simpleweather.repository.data.CityItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/selector_adapter_item"
+        android:onClick="@{() -> viewModel.onItemSelected(cityItem)}">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{cityItem.name}"
+            android:textColor="@color/color_white_FFFFFF"
+            android:fontFamily="@font/nanum_gothic_bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="30dp"/>
+
+        <ImageView
+            android:id="@+id/imageFavorite"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:visibility="@{cityItem.isShown ? View.VISIBLE : View.GONE}"
+            app:bindRes="@{viewModel.getRes(cityItem)}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="20dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

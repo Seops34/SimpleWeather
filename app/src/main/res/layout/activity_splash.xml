@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_gray_202020">
+
+        <ImageView
+            android:id="@+id/imageWeather"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/image_weather"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_developer"
+            android:textColor="@color/color_white_FFFFFF"
+            android:fontFamily="@font/nanum_gothic"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:gravity="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="10dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

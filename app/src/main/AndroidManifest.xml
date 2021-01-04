@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.seosh.simpleweather">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_w"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_w_rounded"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDfM467u1DmvW8Rms8-mYU1K1vKMRzpYZ4" />
+
+        <activity
+            android:name=".view.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view.main.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.detail.DetailActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>
